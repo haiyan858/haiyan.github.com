@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | haiyan 个人博客</title>
+  <title>Java Web 乱码问题 | haiyan 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="haiyan 个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="常见乱码情况如下 中文变成看不懂的字符  1Ì Ô £ ¡Î Ò Ï²»¶ £ ¡  通常是编码和解码时用的字符集不一致所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码。  一个汉字变成了一个问号 可能是该字符编码不支持中文，比如：ISO-8859-1不支持中文  一个汉字变成了两个问号 中文经过多次编码且其中有一次编码或者解码使用了不支持中文的字符集   常见的应">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Web 乱码问题">
+<meta property="og:url" content="http://yoursite.com/2019/06/04/Java-Web-乱码问题/index.html">
 <meta property="og:site_name" content="haiyan 个人博客">
+<meta property="og:description" content="常见乱码情况如下 中文变成看不懂的字符  1Ì Ô £ ¡Î Ò Ï²»¶ £ ¡  通常是编码和解码时用的字符集不一致所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码。  一个汉字变成了一个问号 可能是该字符编码不支持中文，比如：ISO-8859-1不支持中文  一个汉字变成了两个问号 中文经过多次编码且其中有一次编码或者解码使用了不支持中文的字符集   常见的应">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-04T03:34:43.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="haiyan 个人博客">
+<meta name="twitter:title" content="Java Web 乱码问题">
+<meta name="twitter:description" content="常见乱码情况如下 中文变成看不懂的字符  1Ì Ô £ ¡Î Ò Ï²»¶ £ ¡  通常是编码和解码时用的字符集不一致所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码。  一个汉字变成了一个问号 可能是该字符编码不支持中文，比如：ISO-8859-1不支持中文  一个汉字变成了两个问号 中文经过多次编码且其中有一次编码或者解码使用了不支持中文的字符集   常见的应">
   
     <link rel="alternative" href="/atom.xml" title="haiyan 个人博客" type="application/atom+xml">
   
@@ -150,103 +154,175 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java-Web-乱码问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java Web 乱码问题
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/06/04/Java-Web-乱码问题/" class="archive-article-date">
+
+        
+        <a href="/2019/06/04/Java-Web-乱码问题/" class="archive-article-date">
   	<time datetime="2019-06-04T02:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/06/04/Java-Web-乱码问题/">Java Web 乱码问题</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="常见乱码情况如下"><a href="#常见乱码情况如下" class="headerlink" title="常见乱码情况如下"></a>常见乱码情况如下</h3><ol>
+<li>中文变成看不懂的字符</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ì Ô £ ¡Î Ò Ï²»¶ £ ¡</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>通常是<strong>编码和解码时用的字符集不一致</strong>所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码。</p>
+<ol start="2">
+<li><p>一个汉字变成了一个问号</p>
+<p>可能是该字符编码<strong>不支持中文</strong>，比如：ISO-8859-1不支持中文</p>
+</li>
+<li><p>一个汉字变成了两个问号</p>
+<p>中文经过多次编码且其中有一次编码或者解码使用了<strong>不支持中文</strong>的字符集</p>
+</li>
+</ol>
+<h3 id="常见的应用场景分析"><a href="#常见的应用场景分析" class="headerlink" title="常见的应用场景分析"></a>常见的应用场景分析</h3><p>请求参数是乱码</p>
+<ol>
+<li>前端编码设置</li>
+<li>后端编码设置</li>
+</ol>
+<p><a href="https://www.cnblogs.com/yuanfy008/p/6937803.html" target="_blank" rel="noopener">参考</a></p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/04/Java-Web-乱码问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/23/优秀的程序员一定要有自己的博客！/" class="archive-article-date">
-  	<time datetime="2019-05-23T02:06:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/23/优秀的程序员一定要有自己的博客！/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">优秀的程序员一定要有自己的博客！</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/23/优秀的程序员一定要有自己的博客！/">优秀的程序员一定要有自己的博客！</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/05/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-23T01:59:21.502Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/05/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -269,8 +345,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
