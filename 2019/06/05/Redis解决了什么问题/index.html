@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hello World | haiyan 个人博客</title>
+  <title>Redis解决了什么问题 | haiyan 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
+<meta name="keywords" content="Redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2019/05/23/hello-world/index.html">
+<meta property="og:title" content="Redis解决了什么问题">
+<meta property="og:url" content="http://yoursite.com/2019/06/05/Redis解决了什么问题/index.html">
 <meta property="og:site_name" content="haiyan 个人博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T01:59:21.502Z">
+<meta property="og:updated_time" content="2019-06-05T10:47:53.107Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Redis解决了什么问题">
+<meta name="twitter:description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
   
     <link rel="alternative" href="/atom.xml" title="haiyan 个人博客" type="application/atom+xml">
   
@@ -154,39 +155,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Redis解决了什么问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Redis解决了什么问题
     </h1>
   
 
         
-        <a href="/2019/05/23/hello-world/" class="archive-article-date">
-  	<time datetime="2019-05-23T01:59:21.502Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
+        <a href="/2019/06/05/Redis解决了什么问题/" class="archive-article-date">
+  	<time datetime="2019-06-05T10:41:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h3 id="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果"><a href="#问题描述：请求热点新闻的API接口时，需要2秒才能得到结果" class="headerlink" title="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果"></a>问题描述：请求热点新闻的API接口时，需要2秒才能得到结果</h3><blockquote>
+<p>如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）</p>
+</blockquote>
+<h4 id="解决的一个递进过程如下："><a href="#解决的一个递进过程如下：" class="headerlink" title="解决的一个递进过程如下："></a>解决的一个递进过程如下：</h4><ol>
+<li><p>缓存控制：</p>
+<p>为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。</p>
+<ol>
+<li>如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（10分钟以内）。</li>
+<li>但是还有2个弊端：<ol>
+<li>第一个是在缓存生效的10分钟内，api消费者可能会得到旧的数据；</li>
+<li>第二个是如果api的客户端无视缓存直接访问API依然是需要2秒，治标不治本。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>SQL查询结果缓存：</p>
+<p>经过排查，其主要原因在于<strong>使用SQL获取热点新闻</strong>的过程中消耗了将近2秒的时间。</p>
+<ol>
+<li>简单粗暴的解决方案：即把SQL查询的结果直接缓存在当前api服务器的内存中（设置缓存有效时间为1分钟）。</li>
+<li>后续1分钟内的请求直接读缓存，不再花费2秒去执行SQL了。</li>
+<li>假如这个api每秒接收到的请求时100个，那么一分钟就是6000个，也就是只有前2秒拥挤过来的请求会耗时2秒，后续的58秒中的所有请求都可以做到即使响应，而无需再等2秒的时间。</li>
+<li><strong>弊端</strong>：API 服务器的内存要爆满了！！！</li>
+</ol>
+</li>
+<li><p>API 服务器缓存转移</p>
+<ol>
+<li>在API服务器的内存都被缓存塞满的时候，最直接的想法就是把这些缓存都丢到一个专门的服务器上，把它的内存配置的大大的。然后就选择了Redis</li>
+<li>随后我们就用上了一台单独的服务器作为Redis的服务器，API服务器的内存压力得以解决。</li>
+</ol>
+</li>
+</ol>
 
       
 
@@ -216,6 +235,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -266,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/05/23/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/05/Redis解决了什么问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +310,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/05/23/优秀的程序员一定要有自己的博客！/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          优秀的程序员一定要有自己的博客！
-        
-      </div>
-    </a>
   
+    <a href="/2019/06/05/MyBatis中当实体类中的属性名和表中的字段名不一样/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MyBatis中当实体类中的属性名和表中的字段名不一样</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
