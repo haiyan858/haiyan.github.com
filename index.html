@@ -179,7 +179,7 @@
 <li><p>缓存控制：</p>
 <p>为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。</p>
 <ol>
-<li>如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（10分钟以内）。</li>
+<li>如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（10分钟以内）</li>
 <li>但是还有2个弊端：<ol>
 <li>第一个是在缓存生效的10分钟内，api消费者可能会得到旧的数据；</li>
 <li>第二个是如果api的客户端无视缓存直接访问API依然是需要2秒，治标不治本。</li>
@@ -190,12 +190,18 @@
 <li><p>SQL查询结果缓存：</p>
 <p>经过排查，其主要原因在于<strong>使用SQL获取热点新闻</strong>的过程中消耗了将近2秒的时间。</p>
 <ol>
-<li>简单粗暴的解决方案：即把SQL查询的结果直接缓存在当前api服务器的内存中（设置缓存有效时间为1分钟）。</li>
-<li>后续1分钟内的请求直接读缓存，不再花费2秒去执行SQL了。</li>
-<li>假如这个api每秒接收到的请求时100个，那么一分钟就是6000个，也就是只有前2秒拥挤过来的请求会耗时2秒，后续的58秒中的所有请求都可以做到即使响应，而无需再等2秒的时间。</li>
-<li><strong>弊端</strong>：API 服务器的内存要爆满了！！！</li>
+<li><p>简单粗暴的解决方案：即把SQL查询的结果直接缓存在当前api服务器的内存中（设置缓存有效时间为1分钟）</p>
+</li>
+<li><p>后续1分钟内的请求直接读缓存，不再花费2秒去执行SQL了。</p>
+</li>
+<li><p>假如这个api每秒接收到的请求时100个，那么一分钟就是6000个，也就是只有前2秒拥挤过来的请求会耗时2秒，后续的58秒中的所有请求都可以做到即使响应，而无需再等2秒的时间。</p>
+</li>
+<li><p><strong>弊端</strong>：API 服务器的内存要爆满了！！！</p>
+</li>
 </ol>
 </li>
+</ol>
+<ol start="3">
 <li><p>API 服务器缓存转移</p>
 <ol>
 <li>在API服务器的内存都被缓存塞满的时候，最直接的想法就是把这些缓存都丢到一个专门的服务器上，把它的内存配置的大大的。然后就选择了Redis</li>
@@ -719,11 +725,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
             
             <div class="clearfix"></div>
