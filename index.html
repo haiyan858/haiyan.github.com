@@ -152,6 +152,121 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-hexo-发布博客报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/06/hexo-发布博客报错/">hexo 发布博客报错</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/06/hexo-发布博客报错/" class="archive-article-date">
+  	<time datetime="2019-06-06T02:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>发布博客时，执行下面的命令，报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+
+<p>以下为详细的报错内容：</p>
+<pre><code>INFO  Start processing
+ERROR Process failed: _posts/Redis解决了什么问题.md
+YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1:
+
+    ^
+    at generateError (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at readBlockMapping (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1073:9)
+    at composeNode (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1519:3)
+    at loadDocuments (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1575:5)
+    at Object.load (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1596:19)
+    at parseYAML (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo-front-matter/lib/front_matter.js:80:21)
+    at parse (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo-front-matter/lib/front_matter.js:56:12)
+    at Promise.all.spread (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo/lib/plugins/processor/post.js:51:20)
+    at tryCatcher (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:509:35)
+    at Promise._settlePromise (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:694:18)
+    at Promise._fulfill (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:638:18)
+    at PromiseArray._resolve (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:144:14)
+    at PromiseArray._iterate (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:114:31)
+    at PromiseArray.init [as _init] (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:78:10)
+    at Promise._settlePromise (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:566:21)
+    at Promise._settlePromise0 (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:614:10)
+INFO  Files loaded in 191 ms
+INFO  0 files generated in 448 ms</code></pre><p>打开对应博客文件，查看第4行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[@cuihaiyandeMacBook-Pro:_posts]$ cat -n Redis解决了什么问题.md</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1	---</span><br><span class="line">2	title: Redis解决了什么问题</span><br><span class="line">3	date: 2019-06-05 18:41:39</span><br><span class="line">4	tags:Redis</span><br><span class="line">5	---</span><br><span class="line">6</span><br><span class="line">7	### 问题描述：请求热点新闻的API接口时，需要2秒才能得到结果</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+
+<p><strong>发现是 tags:Redis 之间没有加空格，应该为 tags: Redis</strong></p>
+<p>翻看github 的 Issues ，发现有这个问题的解答</p>
+<p><strong>Add space to after tags field is better when create new post</strong></p>
+<p><a href="https://github.com/hexojs/hexo/issues/3445" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/3445</a></p>
+<p><strong>总结：还是需要加空格的！！！</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">hexo YAMLException</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/06/hexo-发布博客报错/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Redis解决了什么问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -725,11 +840,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+                <a href="javascript:void(0)" class="js-tag color4">hexo YAMLException</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MyBatis</a>
               </li>
             
             <div class="clearfix"></div>

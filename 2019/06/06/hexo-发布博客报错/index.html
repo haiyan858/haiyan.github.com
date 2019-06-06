@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MyBatis中当实体类中的属性名和表中的字段名不一样 | haiyan 个人博客</title>
+  <title>hexo 发布博客报错 | haiyan 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解决方案如下：  写SQL语句时起别名 12345678910&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;&amp;lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &amp;gt;&amp;lt;mapper">
-<meta name="keywords" content="MyBatis">
+  <meta name="description" content="发布博客时，执行下面的命令，报错 1hexo g  以下为详细的报错内容： INFO  Start processing ERROR Process failed: _posts/Redis解决了什么问题.md YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key">
+<meta name="keywords" content="hexo YAMLException">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MyBatis中当实体类中的属性名和表中的字段名不一样">
-<meta property="og:url" content="http://yoursite.com/2019/06/05/MyBatis中当实体类中的属性名和表中的字段名不一样/index.html">
+<meta property="og:title" content="hexo 发布博客报错">
+<meta property="og:url" content="http://yoursite.com/2019/06/06/hexo-发布博客报错/index.html">
 <meta property="og:site_name" content="haiyan 个人博客">
-<meta property="og:description" content="解决方案如下：  写SQL语句时起别名 12345678910&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;&amp;lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &amp;gt;&amp;lt;mapper">
+<meta property="og:description" content="发布博客时，执行下面的命令，报错 1hexo g  以下为详细的报错内容： INFO  Start processing ERROR Process failed: _posts/Redis解决了什么问题.md YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-05T06:36:12.277Z">
+<meta property="og:updated_time" content="2019-06-06T02:58:38.194Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MyBatis中当实体类中的属性名和表中的字段名不一样">
-<meta name="twitter:description" content="解决方案如下：  写SQL语句时起别名 12345678910&amp;lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&amp;gt;&amp;lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot; &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot; &amp;gt;&amp;lt;mapper">
+<meta name="twitter:title" content="hexo 发布博客报错">
+<meta name="twitter:description" content="发布博客时，执行下面的命令，报错 1hexo g  以下为详细的报错内容： INFO  Start processing ERROR Process failed: _posts/Redis解决了什么问题.md YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key">
   
     <link rel="alternative" href="/atom.xml" title="haiyan 个人博客" type="application/atom+xml">
   
@@ -155,43 +155,68 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MyBatis中当实体类中的属性名和表中的字段名不一样" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-hexo-发布博客报错" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MyBatis中当实体类中的属性名和表中的字段名不一样
+      hexo 发布博客报错
     </h1>
   
 
         
-        <a href="/2019/06/05/MyBatis中当实体类中的属性名和表中的字段名不一样/" class="archive-article-date">
-  	<time datetime="2019-06-05T06:17:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-05</time>
+        <a href="/2019/06/06/hexo-发布博客报错/" class="archive-article-date">
+  	<time datetime="2019-06-06T02:05:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>解决方案如下：</p>
-<ol>
-<li><p>写SQL语句时起别名</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.debug.mooc.dubbo.one.model.mapper.ItemInfoMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectByPrimaryKey"</span> <span class="attr">resultType</span>=<span class="string">"com.debug.mooc.dubbo.one.model.entity.ItemInfo"</span>&gt;</span></span><br><span class="line">        select</span><br><span class="line">        	id,is_active as isActive, create_time as createTime</span><br><span class="line">        from item_info</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在MyBatis的<strong>全局配置文件</strong>中，开启驼峰命名规则</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE configuration</span></span><br><span class="line"><span class="meta">        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"</span></span><br><span class="line"><span class="meta">        "http://mybatis.org/dtd/mybatis-3-config.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">settings</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--开启自动驼峰命名规则--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">setting</span> <span class="attr">name</span>=<span class="string">"mapUnderscoreToCamelCase"</span> <span class="attr">value</span>=<span class="string">"true"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">settings</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>发布博客时，执行下面的命令，报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
+<p>以下为详细的报错内容：</p>
+<pre><code>INFO  Start processing
+ERROR Process failed: _posts/Redis解决了什么问题.md
+YAMLException: can not read a block mapping entry; a multiline key may not be an implicit key at line 4, column 1:
 
+    ^
+    at generateError (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:167:10)
+    at throwError (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:173:9)
+    at readBlockMapping (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1073:9)
+    at composeNode (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1359:12)
+    at readDocument (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1519:3)
+    at loadDocuments (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1575:5)
+    at Object.load (/Users/cuihaiyan/dev-libs/blog/node_modules/js-yaml/lib/js-yaml/loader.js:1596:19)
+    at parseYAML (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo-front-matter/lib/front_matter.js:80:21)
+    at parse (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo-front-matter/lib/front_matter.js:56:12)
+    at Promise.all.spread (/Users/cuihaiyan/dev-libs/blog/node_modules/hexo/lib/plugins/processor/post.js:51:20)
+    at tryCatcher (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:509:35)
+    at Promise._settlePromise (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:569:18)
+    at Promise._settlePromise0 (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:614:10)
+    at Promise._settlePromises (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:694:18)
+    at Promise._fulfill (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:638:18)
+    at PromiseArray._resolve (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:144:14)
+    at PromiseArray._iterate (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:114:31)
+    at PromiseArray.init [as _init] (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise_array.js:78:10)
+    at Promise._settlePromise (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:566:21)
+    at Promise._settlePromise0 (/Users/cuihaiyan/dev-libs/blog/node_modules/bluebird/js/release/promise.js:614:10)
+INFO  Files loaded in 191 ms
+INFO  0 files generated in 448 ms</code></pre><p>打开对应博客文件，查看第4行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[@cuihaiyandeMacBook-Pro:_posts]$ cat -n Redis解决了什么问题.md</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<ol start="3">
-<li>在Mapper的映射文件中使用 <strong>resultMap 来自定义映射规则</strong></li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" &gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.debug.mooc.dubbo.one.model.mapper.ItemInfoMapper"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"BaseResultMap"</span> <span class="attr">type</span>=<span class="string">"com.debug.mooc.dubbo.one.model.entity.ItemInfo"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">id</span> <span class="attr">column</span>=<span class="string">"id"</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"code"</span> <span class="attr">property</span>=<span class="string">"code"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"name"</span> <span class="attr">property</span>=<span class="string">"name"</span> <span class="attr">jdbcType</span>=<span class="string">"VARCHAR"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"price"</span> <span class="attr">property</span>=<span class="string">"price"</span> <span class="attr">jdbcType</span>=<span class="string">"DECIMAL"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"is_active"</span> <span class="attr">property</span>=<span class="string">"isActive"</span> <span class="attr">jdbcType</span>=<span class="string">"INTEGER"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"create_time"</span> <span class="attr">property</span>=<span class="string">"createTime"</span> <span class="attr">jdbcType</span>=<span class="string">"TIMESTAMP"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"update_time"</span> <span class="attr">property</span>=<span class="string">"updateTime"</span> <span class="attr">jdbcType</span>=<span class="string">"TIMESTAMP"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">sql</span> <span class="attr">id</span>=<span class="string">"Base_Column_List"</span>&gt;</span></span><br><span class="line">    id, code, name, price, is_active, create_time, update_time</span><br><span class="line">    <span class="tag">&lt;/<span class="name">sql</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectByPrimaryKey"</span> <span class="attr">resultMap</span>=<span class="string">"BaseResultMap"</span> <span class="attr">parameterType</span>=<span class="string">"java.lang.Integer"</span>&gt;</span></span><br><span class="line">        select</span><br><span class="line">        <span class="tag">&lt;<span class="name">include</span> <span class="attr">refid</span>=<span class="string">"Base_Column_List"</span>/&gt;</span></span><br><span class="line">        from item_info</span><br><span class="line">        where id = #&#123;id,jdbcType=INTEGER&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1	---</span><br><span class="line">2	title: Redis解决了什么问题</span><br><span class="line">3	date: 2019-06-05 18:41:39</span><br><span class="line">4	tags:Redis</span><br><span class="line">5	---</span><br><span class="line">6</span><br><span class="line">7	### 问题描述：请求热点新闻的API接口时，需要2秒才能得到结果</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
 
+<p><strong>发现是 tags:Redis 之间没有加空格，应该为 tags: Redis</strong></p>
+<p>翻看github 的 Issues ，发现有这个问题的解答</p>
+<p><strong>Add space to after tags field is better when create new post</strong></p>
+<p><a href="https://github.com/hexojs/hexo/issues/3445" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/3445</a></p>
+<p><strong>总结：还是需要加空格的！！！</strong></p>
 
       
 
@@ -226,7 +251,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MyBatis</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">hexo YAMLException</a>
         		</li>
       		
 		</ul>
@@ -282,7 +307,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/05/MyBatis中当实体类中的属性名和表中的字段名不一样/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/06/hexo-发布博客报错/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -296,18 +321,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/05/Redis解决了什么问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Redis解决了什么问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/04/Ajax工作原理/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Ajax工作原理</div>
+    <a href="/2019/06/05/Redis解决了什么问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Redis解决了什么问题</div>
       <i class="icon-circle-right"></i>
     </a>
   
