@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Redis解决了什么问题 | haiyan 个人博客</title>
+  <title>haiyan 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
-<meta name="keywords" content="Redis">
+  <meta name="description" content="问题:    在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  思路:  1、暴力破解: 循环遍历 2、利用二维数组的特性: 递增 ​      用某行最小或某列最大与 target 比较，每次可剔除一整行或一整列  实现: Java 123456789">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Redis解决了什么问题">
-<meta property="og:url" content="http://yoursite.com/2019/06/05/Redis解决了什么问题/index.html">
+<meta property="og:title" content="haiyan 个人博客">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/牛客网-01-二维数组中的查找/index.html">
 <meta property="og:site_name" content="haiyan 个人博客">
-<meta property="og:description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
+<meta property="og:description" content="问题:    在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  思路:  1、暴力破解: 循环遍历 2、利用二维数组的特性: 递增 ​      用某行最小或某列最大与 target 比较，每次可剔除一整行或一整列  实现: Java 123456789">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-05T10:54:00.401Z">
+<meta property="og:updated_time" content="2019-08-24T04:45:22.440Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Redis解决了什么问题">
-<meta name="twitter:description" content="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果 如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）  解决的一个递进过程如下： 缓存控制： 为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。  如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（">
+<meta name="twitter:title" content="haiyan 个人博客">
+<meta name="twitter:description" content="问题:    在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。  思路:  1、暴力破解: 循环遍历 2、利用二维数组的特性: 递增 ​      用某行最小或某列最大与 target 比较，每次可剔除一整行或一整列  实现: Java 123456789">
   
     <link rel="alternative" href="/atom.xml" title="haiyan 个人博客" type="application/atom+xml">
   
@@ -155,63 +154,24 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Redis解决了什么问题" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-牛客网-01-二维数组中的查找" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Redis解决了什么问题
-    </h1>
-  
-
-        
-        <a href="/2019/06/05/Redis解决了什么问题/" class="archive-article-date">
-  	<time datetime="2019-06-05T10:41:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-05</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果"><a href="#问题描述：请求热点新闻的API接口时，需要2秒才能得到结果" class="headerlink" title="问题描述：请求热点新闻的API接口时，需要2秒才能得到结果"></a>问题描述：请求热点新闻的API接口时，需要2秒才能得到结果</h3><blockquote>
-<p>如何提升API消费者感知的性能？（如何优化，让客户使用的时候，感觉时间不那么长）</p>
+        <p>问题: </p>
+<blockquote>
+<p> 在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
 </blockquote>
-<h4 id="解决的一个递进过程如下："><a href="#解决的一个递进过程如下：" class="headerlink" title="解决的一个递进过程如下："></a>解决的一个递进过程如下：</h4><ol>
-<li><p>缓存控制：</p>
-<p>为API的响应加上基于HTTP的缓存控制 cache-control:max-age=600 ，即让消费者可以缓存这个响应十分钟。</p>
-<ol>
-<li>如果api消费者如果有效的利用了响应中的缓存控制信息，则可以有效的改善其感知的性能（10分钟以内）</li>
-<li>但是还有2个弊端：<ol>
-<li>第一个是在缓存生效的10分钟内，api消费者可能会得到旧的数据；</li>
-<li>第二个是如果api的客户端无视缓存直接访问API依然是需要2秒，治标不治本。</li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>SQL查询结果缓存：</p>
-<p>经过排查，其主要原因在于<strong>使用SQL获取热点新闻</strong>的过程中消耗了将近2秒的时间。</p>
-<ol>
-<li><p>简单粗暴的解决方案：即把SQL查询的结果直接缓存在当前api服务器的内存中（设置缓存有效时间为1分钟）</p>
-</li>
-<li><p>后续1分钟内的请求直接读缓存，不再花费2秒去执行SQL了。</p>
-</li>
-<li><p>假如这个api每秒接收到的请求时100个，那么一分钟就是6000个，也就是只有前2秒拥挤过来的请求会耗时2秒，后续的58秒中的所有请求都可以做到即使响应，而无需再等2秒的时间。</p>
-</li>
-<li><p><strong>弊端</strong>：API 服务器的内存要爆满了！！！</p>
-</li>
-</ol>
-</li>
-</ol>
-<ol start="3">
-<li><p>API 服务器缓存转移</p>
-<ol>
-<li>在API服务器的内存都被缓存塞满的时候，最直接的想法就是把这些缓存都丢到一个专门的服务器上，把它的内存配置的大大的。然后就选择了Redis</li>
-<li>随后我们就用上了一台单独的服务器作为Redis的服务器，API服务器的内存压力得以解决。</li>
-</ol>
-</li>
-</ol>
+<p>思路:</p>
+<blockquote>
+<p>1、暴力破解: 循环遍历</p>
+<p>2、利用二维数组的特性: 递增</p>
+<p>​      用某行最小或某列最大与 target 比较，每次可剔除一整行或一整列</p>
+</blockquote>
+<p>实现: Java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> cuihaiyan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span>_Time 2019-08-23 21:59</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 二维数组的查找</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 1 2 3</span></span><br><span class="line"><span class="comment"> * 4 5 6</span></span><br><span class="line"><span class="comment"> * 7 8 9</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution1</span> </span>&#123;</span><br><span class="line">    <span class="comment">//暴力破解</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> target, <span class="keyword">int</span>[][] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; array[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (target == array[i][j]) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//利用二维数组的特性</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//从左下角的值开始找</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">Find2</span><span class="params">(<span class="keyword">int</span> target, <span class="keyword">int</span>[][] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rows = array.length;</span><br><span class="line">        <span class="keyword">if</span> (rows == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> cols = array[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">if</span> (cols == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//左下</span></span><br><span class="line">        <span class="keyword">int</span> row = rows - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> col = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (row &gt;= <span class="number">0</span> &amp;&amp; col &lt; cols) &#123;</span><br><span class="line">            <span class="keyword">if</span> (array[row][col] &lt; target) &#123;</span><br><span class="line">                col++;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[row][col] &gt; target) &#123;</span><br><span class="line">                row--;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 1 2 3</span></span><br><span class="line"><span class="comment">     * 4 5 6</span></span><br><span class="line"><span class="comment">     * 7 8 9</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">//从右上角的值开始找</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">Find3</span><span class="params">(<span class="keyword">int</span> target, <span class="keyword">int</span>[][] array)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> rows = array.length;</span><br><span class="line">        <span class="keyword">if</span> (rows == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> cols = array[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">if</span> (cols == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//右上角</span></span><br><span class="line">        <span class="keyword">int</span> row=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> col = cols-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (row&lt;rows &amp;&amp; col&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(array[row][col]);</span><br><span class="line">            <span class="keyword">if</span> (array[row][col] &lt; target)&#123;</span><br><span class="line">                row++;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (array[row][col]&gt;target)&#123;</span><br><span class="line">                col--;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//构建二维数组</span></span><br><span class="line">        <span class="keyword">int</span>[][] array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>][<span class="number">3</span>];</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">        array[<span class="number">0</span>][<span class="number">2</span>] = <span class="number">3</span>;</span><br><span class="line">        array[<span class="number">1</span>][<span class="number">0</span>] = <span class="number">2</span>;</span><br><span class="line">        array[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">3</span>;</span><br><span class="line">        array[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">4</span>;</span><br><span class="line">				</span><br><span class="line">        <span class="comment">//测试</span></span><br><span class="line">        <span class="keyword">boolean</span> result = Find3(<span class="number">2</span>, array);</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -241,17 +201,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Redis</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -302,7 +251,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/06/05/Redis解决了什么问题/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/牛客网-01-二维数组中的查找/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +265,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/06/hexo-发布博客报错/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo 发布博客报错
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/06/05/MyBatis中当实体类中的属性名和表中的字段名不一样/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MyBatis中当实体类中的属性名和表中的字段名不一样</div>
+    <a href="/2019/08/24/牛客网-03-从尾到头打印链表/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
       <i class="icon-circle-right"></i>
     </a>
   
