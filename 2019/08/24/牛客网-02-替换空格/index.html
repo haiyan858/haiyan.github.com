@@ -6,16 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>about | haiyan 个人博客</title>
+  <title>haiyan 个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+  <meta name="description" content="Java 实现 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091/** * @Author cuiha">
+<meta property="og:type" content="article">
+<meta property="og:title" content="haiyan 个人博客">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/牛客网-02-替换空格/index.html">
 <meta property="og:site_name" content="haiyan 个人博客">
+<meta property="og:description" content="Java 实现 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091/** * @Author cuiha">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T05:50:33.465Z">
+<meta property="og:updated_time" content="2019-08-24T03:16:58.081Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="haiyan 个人博客">
+<meta name="twitter:description" content="Java 实现 12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091/** * @Author cuiha">
   
     <link rel="alternative" href="/atom.xml" title="haiyan 个人博客" type="application/atom+xml">
   
@@ -151,27 +154,15 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-牛客网-02-替换空格" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      about
-    </h1>
-  
-
-        
-        <a href="/about/index.html" class="archive-article-date">
-  	<time datetime="2019-05-23T05:50:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-23</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>Java 实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> cuihaiyan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span>_Time 2019-08-23 22:10</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * 请实现一个函数，将一个字符串中的每个空格替换成“%20”。</span></span><br><span class="line"><span class="comment"> * 例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution2replaceSpace</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//1、调用自带函数 replace or replaceAll</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">replaceSpace</span><span class="params">(StringBuffer str)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> str.toString().replace(<span class="string">" "</span>,<span class="string">"%20"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//2、创建一个新的字符串，用于存放替换后的字符串</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">replaceSpace2</span><span class="params">(StringBuffer str)</span> </span>&#123;</span><br><span class="line">        StringBuffer newStr = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = str.charAt(i);</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">' '</span> == c)&#123;</span><br><span class="line">                <span class="comment">//replace</span></span><br><span class="line">                newStr.append(<span class="string">"%20"</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//newStr append</span></span><br><span class="line">                newStr.append(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> newStr.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">//3、如果不允许创建新字符串，必须要在原来的字符串上进行操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">replaceSpace3</span><span class="params">(StringBuffer str)</span></span>&#123;</span><br><span class="line">        <span class="comment">//从后往前，替换字符串</span></span><br><span class="line">        <span class="keyword">if</span> (str == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> originalLength = str.length();</span><br><span class="line">        <span class="keyword">int</span> numberOfSpace = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; originalLength; i++) &#123;</span><br><span class="line">            <span class="keyword">char</span> c = str.charAt(i);</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">' '</span> == c)&#123;</span><br><span class="line">                numberOfSpace++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">/*newLength 为把空格替换为 %20 之后的长度*/</span></span><br><span class="line">        <span class="keyword">int</span> newLength = originalLength + numberOfSpace*<span class="number">2</span>;</span><br><span class="line">        str.setLength(newLength); <span class="comment">//设置长度</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> indexOfOriginal = originalLength-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> indexOfNew = newLength-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (indexOfNew &gt; indexOfOriginal)&#123; <span class="comment">//</span></span><br><span class="line">            <span class="keyword">char</span> c = str.charAt(indexOfOriginal);</span><br><span class="line">            <span class="keyword">if</span> (c == <span class="string">' '</span>)&#123;</span><br><span class="line">                str.setCharAt(indexOfNew--,<span class="string">'0'</span>);</span><br><span class="line">                str.setCharAt(indexOfNew--,<span class="string">'2'</span>);</span><br><span class="line">                str.setCharAt(indexOfNew--,<span class="string">'%'</span>);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                str.setCharAt(indexOfNew--,c);</span><br><span class="line">            &#125;</span><br><span class="line">            indexOfOriginal--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> str.toString();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//测试用例：</span></span><br><span class="line">        <span class="comment">//1、输入的字符串包含空格</span></span><br><span class="line">        <span class="comment">//2、输入的字符串没有空格</span></span><br><span class="line">        <span class="comment">//3、特殊输入：空串，只有空格，连续多个空格</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//String str="We Are Happy";</span></span><br><span class="line">        <span class="comment">//String str="We Are  Happy";</span></span><br><span class="line">        <span class="comment">//String str="ab";</span></span><br><span class="line">        <span class="comment">//String str=" ";</span></span><br><span class="line">        String str=<span class="string">"null"</span>;</span><br><span class="line">        StringBuffer strBuf = <span class="keyword">new</span> StringBuffer(str);</span><br><span class="line"></span><br><span class="line">        System.out.println(replaceSpace(strBuf));</span><br><span class="line">        System.out.println(replaceSpace2(strBuf));</span><br><span class="line">        System.out.println(replaceSpace3(strBuf));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -250,7 +241,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/about/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/24/牛客网-02-替换空格/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -262,6 +253,16 @@
 </article>
 
   
+<nav id="article-nav">
+  
+  
+    <a href="/2019/06/08/前后端分离架构/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前后端分离架构</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -312,7 +313,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
