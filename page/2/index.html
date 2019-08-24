@@ -152,6 +152,87 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Java-Web-乱码问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/04/Java-Web-乱码问题/">Java Web 乱码问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/04/Java-Web-乱码问题/" class="archive-article-date">
+  	<time datetime="2019-06-04T02:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="常见乱码情况如下"><a href="#常见乱码情况如下" class="headerlink" title="常见乱码情况如下"></a>常见乱码情况如下</h3><h5 id="中文变成看不懂的字符"><a href="#中文变成看不懂的字符" class="headerlink" title="中文变成看不懂的字符"></a>中文变成看不懂的字符</h5><ul>
+<li><p>通常是<strong>编码和解码时用的字符集不一致</strong>所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码</p>
+</li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ì Ô £ ¡Î Ò Ï²»¶ £ ¡</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h5 id="一个汉字变成了一个问号"><a href="#一个汉字变成了一个问号" class="headerlink" title="一个汉字变成了一个问号"></a>一个汉字变成了一个问号</h5><ul>
+<li>可能是该字符编码<strong>不支持中文</strong>，比如：ISO-8859-1不支持中文</li>
+</ul>
+<h5 id="一个汉字变成了两个问号"><a href="#一个汉字变成了两个问号" class="headerlink" title="一个汉字变成了两个问号"></a>一个汉字变成了两个问号</h5><ul>
+<li>中文经过多次编码且其中有一次编码或者解码使用了<strong>不支持中文</strong>的字符集</li>
+</ul>
+<h3 id="常见的应用场景分析"><a href="#常见的应用场景分析" class="headerlink" title="常见的应用场景分析"></a>常见的应用场景分析</h3><p>请求参数是乱码</p>
+<ul>
+<li>前端编码设置</li>
+<li>后端编码设置</li>
+</ul>
+<p><a href="https://www.cnblogs.com/yuanfy008/p/6937803.html" target="_blank" rel="noopener">参考</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/04/Java-Web-乱码问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-优秀的程序员一定要有自己的博客！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -390,15 +471,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo YAMLException</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">牛客网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -410,15 +495,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">算法复杂度</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
             
             <div class="clearfix"></div>

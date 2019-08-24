@@ -152,6 +152,114 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-牛客网-04-重建二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/24/牛客网-04-重建二叉树/">牛客网-04-重建二叉树</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/24/牛客网-04-重建二叉树/" class="archive-article-date">
+  	<time datetime="2019-08-24T09:46:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>问题: </p>
+<blockquote>
+<p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。</p>
+</blockquote>
+<p>思路: </p>
+<blockquote>
+<p>前序遍历的访问顺序: 根结点、左子树、右子树</p>
+<p>中序遍历的访问顺序: 左子树、根结点、右子树</p>
+<p>根据<strong>中序</strong>遍历和<strong>前序</strong>遍历可以确定二叉树，具体过程为：</p>
+<ol>
+<li>根据前序序列的第一个结点确定根结点</li>
+<li>根据根结点在中序序列中的位置, 切割出左右子树</li>
+<li>对左右子树递归, 使用同样的方式继续分割</li>
+</ol>
+</blockquote>
+<p>复杂度</p>
+<blockquote>
+<p>时间复杂度：O(n)<br>空间复杂度：O(n) </p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> cuihaiyan</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Create</span>_Time 2019-08-24 12:48</span></span><br><span class="line"><span class="comment"> * &lt;p&gt;</span></span><br><span class="line"><span class="comment"> * 输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。</span></span><br><span class="line"><span class="comment"> * 假设输入的前序遍历和中序遍历的结果中都不含重复的数字。</span></span><br><span class="line"><span class="comment"> * 例如输入前序遍历序列&#123;1,2,4,7,3,5,6,8&#125;和中序遍历序列&#123;4,7,2,1,5,3,8,6&#125;，则重建二叉树并返回。</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution4reConstructBinaryTree</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> pre 前序序列 &#123;1,2,4,7,3,5,6,8&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> in  中序序列 &#123;4,7,2,1,5,3,8,6&#125;</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> TreeNode <span class="title">reConstructBinaryTree</span><span class="params">(<span class="keyword">int</span>[] pre, <span class="keyword">int</span>[] in)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pre.length == <span class="number">0</span> || in.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//根结点</span></span><br><span class="line">        <span class="keyword">int</span> rootVal = pre[<span class="number">0</span>];</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(rootVal);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; in.length; i++) &#123;</span><br><span class="line">            <span class="comment">// 在中序中找到前序的根</span></span><br><span class="line">            <span class="keyword">if</span> (rootVal == in[i]) &#123;</span><br><span class="line">                <span class="comment">// 截取字符串：左子树、右子树</span></span><br><span class="line">                <span class="comment">// 注意 copyOfRange 函数，左闭右开</span></span><br><span class="line">                root.left = reConstructBinaryTree(Arrays.copyOfRange(pre, <span class="number">1</span>, <span class="number">1</span> + i), Arrays.copyOfRange(in, <span class="number">0</span>, i));</span><br><span class="line">                root.right = reConstructBinaryTree(Arrays.copyOfRange(pre, <span class="number">1</span> + i, pre.length), Arrays.copyOfRange(in, i + <span class="number">1</span>, in.length));</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//测试</span></span><br><span class="line">        <span class="keyword">int</span>[] pre = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">8</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] in = &#123;<span class="number">4</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">6</span>&#125;;</span><br><span class="line"></span><br><span class="line">        TreeNode treeNode = reConstructBinaryTree(pre, in);</span><br><span class="line">        System.out.println(treeNode);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>知识点</p>
+<blockquote>
+<p>Arrays </p>
+<ul>
+<li>Arrays类位于 <strong>java.util</strong> 包中，主要包含了操纵数组的各种方法</li>
+<li>都是静态方法</li>
+</ul>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span>[] arr=<span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">765</span>,<span class="number">45</span>,<span class="number">3</span>&#125;;</span><br><span class="line">       <span class="comment">//[I@7852e922</span></span><br><span class="line">       System.out.println(arr);</span><br><span class="line">       System.out.println(Arrays.toString(arr));</span><br><span class="line">       <span class="comment">//====&gt;结果：[1, 2, 3, 4, 5, 765, 45, 3]</span></span><br><span class="line">       Arrays.sort(arr,<span class="number">5</span>,<span class="number">7</span>);<span class="comment">//前包后不包===对下标为5，6进行排序</span></span><br><span class="line">       System.out.println(<span class="string">"排序后"</span>+Arrays.toString(arr));</span><br><span class="line">       <span class="comment">//=====&gt;结果：[1, 2, 3, 4, 5, 45, 765, 3]</span></span><br><span class="line">       Arrays.sort(arr);</span><br><span class="line">       System.out.println(<span class="string">"排序后"</span>+Arrays.toString(arr));</span><br><span class="line">       System.out.println(<span class="string">"查找的下标为"</span>+Arrays.binarySearch(arr, <span class="number">3</span>));</span><br><span class="line">       System.out.println(<span class="string">"范围查找的下标为"</span>+Arrays.binarySearch(arr,<span class="number">0</span>,<span class="number">5</span>,<span class="number">4</span>));</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">牛客网</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">二叉树</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/24/牛客网-04-重建二叉树/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-牛客网-03-从尾到头打印链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -992,87 +1100,6 @@ INFO  0 files generated in 448 ms</code></pre><p>打开对应博客文件，查�
 
 
   
-    <article id="post-Java-Web-乱码问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/04/Java-Web-乱码问题/">Java Web 乱码问题</a>
-    </h1>
-  
-
-        
-        <a href="/2019/06/04/Java-Web-乱码问题/" class="archive-article-date">
-  	<time datetime="2019-06-04T02:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="常见乱码情况如下"><a href="#常见乱码情况如下" class="headerlink" title="常见乱码情况如下"></a>常见乱码情况如下</h3><h5 id="中文变成看不懂的字符"><a href="#中文变成看不懂的字符" class="headerlink" title="中文变成看不懂的字符"></a>中文变成看不懂的字符</h5><ul>
-<li><p>通常是<strong>编码和解码时用的字符集不一致</strong>所造成的。比如使用GBK编码，如果使用ISO-8859-1解码的话，就会显示乱码</p>
-</li>
-<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ì Ô £ ¡Î Ò Ï²»¶ £ ¡</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h5 id="一个汉字变成了一个问号"><a href="#一个汉字变成了一个问号" class="headerlink" title="一个汉字变成了一个问号"></a>一个汉字变成了一个问号</h5><ul>
-<li>可能是该字符编码<strong>不支持中文</strong>，比如：ISO-8859-1不支持中文</li>
-</ul>
-<h5 id="一个汉字变成了两个问号"><a href="#一个汉字变成了两个问号" class="headerlink" title="一个汉字变成了两个问号"></a>一个汉字变成了两个问号</h5><ul>
-<li>中文经过多次编码且其中有一次编码或者解码使用了<strong>不支持中文</strong>的字符集</li>
-</ul>
-<h3 id="常见的应用场景分析"><a href="#常见的应用场景分析" class="headerlink" title="常见的应用场景分析"></a>常见的应用场景分析</h3><p>请求参数是乱码</p>
-<ul>
-<li>前端编码设置</li>
-<li>后端编码设置</li>
-</ul>
-<p><a href="https://www.cnblogs.com/yuanfy008/p/6937803.html" target="_blank" rel="noopener">参考</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/06/04/Java-Web-乱码问题/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1174,15 +1201,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo YAMLException</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">牛客网</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1194,15 +1225,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">二叉树</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">字符串</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">算法复杂度</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">链表</a>
               </li>
             
             <div class="clearfix"></div>
